@@ -1,0 +1,44 @@
+
+
+1.Navigated to the Documents directory and accessed the Terminal-Chaos folder.
+2.Entered the Arrakis-dex directory within Terminal-Chaos.
+3.Used the tree command to display the directory structure of Arrakis-dex.
+4.Found the parchment using cat to uncover a message and a code.
+------------------------------------------------------------------------------------
+This is a record of the life of a young boy who aimed for the stars. Stuck in the cold and empty Arakkis, getting through the seal for any will be impossible. Unless they have access to the machine that rips open space-time itself. But getting ur hands on one should be a task of itself. The boy, even though put through the depths of the unknown, remained unfazed and continued his journey to the LIGHT REALM, where he found thXXXXXXXXXXX- 
+
+code1: aHR0cHM6Ly9naXRo
+-------------------------------------------------------------------------------------
+5.Used git branch -r to display lightrealm and darkrealm branches.
+6.Navigated between realms using git checkout.
+7.In the lightrealm, used tree and grep to search, eventually decoding 'Mistveil' and 'Moonbloom' to get the code 'LnnmknnlLhrsdhk'.
+-------------------------------------------------------------------------------------
+holy spell- LnnmknnlLhrsdhk
+-------------------------------------------------------------------------------------
+8.Navigated to The dark realmI and II - opened both chests using python3 chest1.py
+found the message - The noxious fumes of corruption encapsulates the chest. Use artifact containing holy light magic to disperse it and uncover the secrets the treacherous shrine holds..
+
+
+
+
+Forged in the celestial forges of Sigmaron, the Celestial Veil Amulet is a relic born of divine intervention to combat the malevolent forces that threaten the balance of existence. When worn, the Celestial Veil Amulet emanates a radiant glow, warding off malevolent influences and shielding the bearer from the corrupting touch of the Chaos.
+code:CSigVmaroAn
+
+Behold the Light Book!
+A beacon of wisdom that illuminates the path of creation, peace, and enlightenment. The legends whisper of a hidden counterpart in the Dark Realm.
+code2:dWIuY29tL2FtYW5ze
+
+
+code in Darkbook 1 - GNhbGlidXIvVGVyb
+code in Darkbook 2 - WluYWwtQ2hhb3MtR29kU3VpdGU=
+
+combining 4 codes together -  
+aHR0cHM6Ly9naXRodWIuY29tL2FtYW5zeGNhbGlidXIvVGVybWluYWwtQ2hhb3MtR29kU3VpdGU=
+
+Got the link - https://github.com/amansxcalibur/Terminal-Chaos-GodSuite
+
+
+
+
+
+
