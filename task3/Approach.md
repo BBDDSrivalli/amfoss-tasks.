@@ -1,4 +1,4 @@
-<strong>Approach and Experience</strong>
+<strong>Approach and Experience</strong><br><br>
 Despite focusing on algorithms and syntax, this task took longer to complete than anticipated.
 Even without learning every programming language in depth, I found that understanding core algorithms and their implementation was crucial. 
 To navigate the challenges, I relied heavily on resources such as YouTube, Google, and ChatGPT.
