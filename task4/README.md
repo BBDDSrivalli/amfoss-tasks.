@@ -1,6 +1,7 @@
 <strong> OpenDocs </strong>
 
 This repository is for Task-06. The repository used for this example is the Snake Game application built with Python's Tkinter library.
+originl git repositary - https://github.com/Python-World/python-mini-projects/tree/master/projects/Snake%20Game
 
 <strong >Snake Game </strong >
 
@@ -17,7 +18,7 @@ The Snake Game is a classic arcade game implemented using Python and the Tkinter
 <strong >Setup Instructions</strong >
 <br>
 <strong>Clone the Repository:</strong><br>
-git clone https://github.com/yourusername/snake-game.git<br>
+git clone https://github.com/Python-World/python-mini-projects/tree/master/projects/Snake%20Game<br>
 cd snake-game
 <br><br>
 <strong>Create a Virtual Environment:</strong><br>
