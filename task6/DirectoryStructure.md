@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-.
+###Directory Structure of Expense Tracker
+```
 ├── backend
 │   ├── app.js
 │   ├── controllers
@@ -63,6 +63,6 @@
 │           ├── Icons.js
 │           ├── menuItems.js
 │           └── useWindowSize.js
-└── structure.txt
+```
 
 24 directories, 41 files
