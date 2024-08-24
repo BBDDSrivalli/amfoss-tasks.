@@ -1,48 +1,80 @@
-<strong> OpenDocs </strong>
+# Expense Tracker Fullstack
 
-This repository is for Task-06. The repository used for this example is the Snake Game application built with Python's Tkinter library.
-originl git repositary - https://github.com/Python-World/python-mini-projects/tree/master/projects/Snake%20Game
+This repository serves as a complete example for a fullstack expense tracker application. The repository includes both backend and frontend components to provide a functional and interactive expense management system.
 
-<strong >Snake Game </strong >
+## Expense Tracker
 
-<strong>Overview</strong >
+### Overview
 
-The Snake Game is a classic arcade game implemented using Python and the Tkinter library. The objective of the game is to control a snake that moves around the screen, eating food and growing in size. The game ends when the snake collides with the screen's boundaries or its own body. This project serves as an introduction to basic game development concepts and demonstrates the use of Tkinter for graphical interfaces in Python.
+The **Expense Tracker** is a comprehensive application designed to help users manage their expenses and incomes efficiently. The project is built with a **Node.js** backend and a **React.js** frontend, providing a robust solution for tracking financial transactions. This project serves as a practical example of fullstack development, demonstrating key concepts such as CRUD operations, state management, and API integration.
 
-<strong>Features</strong ><br>
-    1.Control the snake's movement using arrow keys<br>
-    2.Randomly spawning food items for the snake to eat<br>
-    3.Score tracking that increases as the snake consumes food<br>
-    4.Game over condition triggered by collisions with the wall or snake's own body<br>
+### Features
 
-<strong >Setup Instructions</strong >
-<br>
-<strong>Clone the Repository:</strong><br>
-git clone https://github.com/Python-World/python-mini-projects/tree/master/projects/Snake%20Game<br>
-cd snake-game
-<br><br>
-<strong>Create a Virtual Environment:</strong><br>
-python -m venv env
-source env/bin/activate
-<br>
-<strong >Install Dependencies:</strong >
-<br>
-For this project, there are no external dependencies beyond Python's standard library, so no additional packages need to be installed.
-<br>
-Run the Game:<br>
-python snake_game.py
-<br>
-Navigate to the game window that appears to start playing.
-<br>
-<strong >Usage</strong >
-<br>
+- **Create, update, and delete** expenses and incomes
+- View a **dashboard** with charts and summaries
+- Manage and **categorize transactions**
+- **Responsive design** for various devices
 
-    1.Control Snake: Use the arrow keys (Up, Down, Left, Right) to navigate the snake across the screen.
-    2.Eat Food: Guide the snake to the red food blocks to grow in size and increase your score.
-    3.Avoid Collisions: Prevent the snake from running into the walls or itself, as this will end the game.
+## Setup Instructions
 
-<strong >Contribution Guidelines</strong >
-<br>
+### Clone the Repository
 
-    1.Reporting Issues: Please report any issues or bugs using the GitHub Issues tab.
-    2.Submitting Pull Requests: Fork the repository, make your changes, and submit a pull request with a description of your changes.
+```bash
+git clone https://github.com/Maclinz/expense-tracker_fullstack.git <br>
+cd expense-tracker_fullstack <br>
+```
+## Backend Setup
+
+1. Navigate to the backend directory:
+
+    ```bash
+    cd backend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the backend server:
+
+    ```bash
+    npm start
+    ```
+
+   
+
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+
+    ```bash
+    cd ../frontend
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the frontend application:
+
+    ```bash
+    npm start
+    ```
+
+  
+
+## Usage
+
+- **Create Expense/Income**: Use the provided forms to add new expenses or incomes.
+- **Update Expense/Income**: Edit existing records by navigating to the respective update page.
+- **Delete Expense/Income**: Remove records using the delete option in the interface.
+
+## Contribution Guidelines
+
+- **Reporting Issues**: Report any bugs or issues using the GitHub Issues tab in the repository.
+- **Submitting Pull Requests**: Fork the repository, make your changes, and submit a pull request with a description of the modifications.
+
