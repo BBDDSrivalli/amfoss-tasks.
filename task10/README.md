@@ -6,7 +6,7 @@
 
 **Create the Environment:** Create a virtual environment to manage project dependencies: ```bash python -m venv env ```
 
-**Activate the Environment:** Activate the virtual environment: On Windows: ```bash .\env\Scripts\activate ``` On Linux/macOS: ```bash source env/bin/activate ```
+**Activate the Environment:** Activate the virtual environment:```bash  source env/bin/activate ```
 
 ## Install Dependencies
 
