@@ -1,115 +1,91 @@
-# Documentation for Snake Game
+## Documentation for Expense Tracker Fullstack
 
-## Overview
+### Overview
 
-The Snake Game is a classic arcade game implemented using Python and the Tkinter library. The objective of the game is to control a snake that moves around the screen, eating food and growing in size. The game ends when the snake collides with the screen's boundaries or its own body. This project demonstrates basic game development concepts and the use of Tkinter for graphical interfaces in Python.
+The **Expense Tracker Fullstack** project includes a backend and frontend for managing expenses and incomes. The backend is built with **Node.js** and **Express**, while the frontend is created using **React.js**. This documentation provides an overview of the project’s functionality and implementation details.
 
-## Functionality
+### Functionality
 
-### Classes
+#### Models
 
-#### Snake
+- **ExpenseModel.js**
 
-- **`__init__`**
-  - Initializes the snake with a default body size and creates the initial snake segments.
+    - `ExpenseModel.create(title, amount, date, category)`
+        - Creates a new expense with the specified details.
 
-- **`move`**
-  - Moves the snake in the current direction and handles the growth of the snake when it eats food.
+    - `ExpenseModel.findAll()`
+        - Retrieves all expenses from the database.
 
-- **`change_direction`**
-  - Updates the direction of the snake based on user input.
+    - `ExpenseModel.findById(id)`
+        - Retrieves a specific expense by its ID.
 
-- **`check_collision`**
-  - Checks for collisions with the game boundaries or the snake's own body.
+    - `ExpenseModel.update(id, updates)`
+        - Updates an existing expense with new values.
 
-#### Food
+    - `ExpenseModel.delete(id)`
+        - Deletes an expense by its ID.
 
-- **`__init__`**
-  - Initializes the food at a random location within the game boundaries.
+- **IncomeModel.js**
 
-### Functions
+    - `IncomeModel.create(title, amount, date, category)`
+        - Creates a new income record.
 
-#### `next_turn(snake, food)`
+    - `IncomeModel.findAll()`
+        - Retrieves all income records.
 
-- Handles the movement of the snake, checks for collisions, and manages the interaction with food. It also schedules the next move of the snake.
+    - `IncomeModel.findById(id)`
+        - Retrieves a specific income by its ID.
 
-#### `change_direction(new_direction)`
+    - `IncomeModel.update(id, updates)`
+        - Updates an existing income record.
 
-- Updates the snake's direction based on user input, ensuring the snake cannot move in the opposite direction.
+    - `IncomeModel.delete(id)`
+        - Deletes an income record by its ID.
 
-#### `check_collisions(snake)`
+#### Controllers
 
-- Checks if the snake has collided with the game boundaries or itself, indicating a game over condition.
+- **expense.js**
+    - Handles requests related to expenses, including creation, retrieval, update, and deletion.
 
-#### `game_over()`
+- **income.js**
+    - Manages income-related requests, similar to expense operations.
 
-- Displays a "GAME OVER" message on the canvas when the game ends.
+#### Views
 
-## Implementation Details
+- **Dashboard**
+    - Displays a summary of expenses and incomes using charts and graphs.
 
-### Game Initialization
+- **ExpenseForm**
+    - Provides a form for adding and editing expenses.
 
-The game window is set up using Tkinter, with a canvas for rendering the game elements and a label for displaying the score. The snake and food are initialized, and the game loop is started using `next_turn`.
+- **IncomeForm**
+    - Provides a form for adding and editing incomes.
 
-### Movement and Controls
+### Implementation Details
 
-The snake's movement is controlled by arrow key events bound to the `change_direction` function. The snake's position is updated based on the current direction, and collision checks are performed after each move.
+#### Expense Management
 
-### Food Interaction
+Expenses are managed through a series of forms and views. The backend API handles CRUD operations for expenses, while the frontend interacts with these endpoints to provide a user interface for managing transactions.
 
-When the snake's head collides with the food, the score is updated, and a new food item is placed on the canvas. The snake grows in size by adding a new segment.
+#### Income Management
 
-### Collision Handling
+Similar to expenses, incomes are managed through dedicated forms and views. The frontend communicates with the backend to perform necessary operations and display income details.
 
-The game checks for collisions with the boundaries or the snake's body. If a collision is detected, the `game_over` function is called to display the game over message.
+### Code Example
 
-## Code Example
+Here’s a snippet from the `app.js` file showing the setup of the Express server and routes:
 
-Here’s a snippet showing how the `next_turn` function handles the snake's movement and interaction with food:
+```javascript
+const express = require('express');
+const app = express();
+const expenseRoutes = require('./routes/transactions');
 
-```python
-def next_turn(snake, food):
+app.use(express.json());
+app.use('/api/transactions', expenseRoutes);
 
-    x, y = snake.coordinates[0]
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
-    if direction == "up":
-        y -= SPACE_SIZE
-    elif direction == "down":
-        y += SPACE_SIZE
-    elif direction == "left":
-        x -= SPACE_SIZE
-    elif direction == "right":
-        x += SPACE_SIZE
-
-    snake.coordinates.insert(0, (x, y))
-
-    square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
-
-    snake.squares.insert(0, square)
-
-    if x == food.coordinates[0] and y == food.coordinates[1]:
-
-        global score
-
-        score += 1
-
-        label.config(text="Score:{}".format(score))
-
-        canvas.delete("food")
-
-        food = Food()
-
-    else:
-
-        del snake.coordinates[-1]
-
-        canvas.delete(snake.squares[-1])
-
-        del snake.squares[-1]
-
-    if check_collisions(snake):
-        game_over()
-
-    else:
-        window.after(SPEED, next_turn, snake, food)
 
