@@ -9,7 +9,6 @@ void createInputFile() {
         exit(1);
     }
     file << "This is a test string for Sub-Task 2.";
-    file.close();
 }
 
 void readAndWrite() {
@@ -31,7 +30,6 @@ void readAndWrite() {
     }
     outfile << content;
     outfile.close();
-    std::cout << "Content successfully copied from input.txt to output.txt" << std::endl;
 
     std::ofstream appendfile("output.txt", std::ios::app);
     if (!appendfile) {
@@ -50,7 +48,6 @@ void readAndWrite() {
     while (std::getline(updatedfile, content)) {
         std::cout << content << std::endl;
     }
-    updatedfile.close();
 }
 
 int main() {
